@@ -1,4 +1,3 @@
-
 fun main() {
 
     val nums : IntArray = intArrayOf(2, 1, 0, 3, 0, 12, 1)
