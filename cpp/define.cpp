@@ -2,8 +2,8 @@
 
 // 定义字符串
 // 容易出现的错误的写法
-// #define HELLO = "hello"
-// #define HELLO "hello";
+// #define HELLO = "hello" // 错误1，`=` 导致编译无法通过。
+// #define HELLO "hello"; // 错误2，`;` 导致编译无法通过。
 #define HELLO "hello"
 // 定义符号
 #define BEGIN {
@@ -16,20 +16,21 @@
 // # 表示转换为字符串。
 #define TO_STRING(s) #s
 // ##（记号连接运算符）：会将2个参数连接起来
-#define CONCAT(x, y) x ## y
+#define CONCAT(x, y) x##y
 
 void a() BEGIN
     printf(" func a\n");
 END
 
-int main() {
+    int
+    main()
+{
     printf(HELLO);
     a();
     int x = 1;
     int y = 2;
- 
-    printf("sum %d\n", SUM(x, y)); // 输出 3
-    printf("to string %s\n", TO_STRING(hello)); // 此处hello将被转为 "hello"输出。
-    printf("concat %d", CONCAT(22, 33)); // 输出 2233
-}
 
+    printf("sum %d\n", SUM(x, y));              // 输出 3
+    printf("to string %s\n", TO_STRING(hello)); // 此处hello将被转为 "hello"输出。
+    printf("concat %d", CONCAT(22, 33));        // 输出 2233
+}

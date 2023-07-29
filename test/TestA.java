@@ -5,6 +5,7 @@ public class TestA {
     interface IFace {
         int a = 0;
     }
+    
     abstract class A {
         int a;
     }
@@ -15,6 +16,7 @@ public class TestA {
            i = ((A)this).a ;
         }
     }
+
     public static void main(String args[]) {
 
         int i = new Integer(10).intValue();
